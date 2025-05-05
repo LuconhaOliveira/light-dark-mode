@@ -91,6 +91,7 @@
 
 .theme-container.dark .theme-toggle-button{
     background-color: var(--button-bg-dark);
+    color: var(--text-color-dark);
 }
 
 .theme-toggle-button:hover{
