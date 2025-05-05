@@ -1,0 +1,102 @@
+:root {
+    --primary-color-light: #f0f0f0;
+    --secondary-color-light: #ffffff;
+    --text-color-light: #333;
+    --hover-color-light: #ddd;
+    --button-bg-light: #e0e0e0;
+    --button-hover-light: #ccc;
+    --sidebar-bg-light: #ffffff;
+
+    --primary-color-dark: #1e1e1e;
+    --secondary-color-dark: #2e2e2e;
+    --text-color-dark: #f0f0f0;
+    --hover-color-dark: #555;
+    --button-bg-dark: #333;
+    --button-hover-dark: #444;
+    --sidebar-bg-dark: #2e2e2e;
+}  
+
+.theme-container{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-container.light{
+    background-color: var(--primary-color-light);
+    color: var(--text-color-light);
+}
+
+.theme-container.dark{
+    background-color: var(--primary-color-dark);
+    color: var(--text-color-dark);
+}
+
+.sidebar{
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--sidebar-bg-light);
+    transition: background-color 0.3s;
+}
+
+.theme-container.dark .sidebar{
+    background-color: var(--sidebar-bg-dark);
+}
+
+.sidebar ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li{
+    margin: 20px 0;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.sidebar ul li a:hover{
+    background-color: var(--hover-color-light);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.theme-container.dark .sidebar ul li a:hover{
+    background-color: var(--hover-color-dark);
+}
+
+.content{
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.button-container{
+    margin-top: 20px;
+}
+
+.theme-toggle-button{
+    padding: 10px 20px;
+    background-color: var(--button-bg-light);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-container.dark .theme-toggle-button{
+    background-color: var(--button-bg-dark);
+}
+
+.theme-toggle-button:hover{
+    background-color: var(--button-hover-light);
+}
+
+.theme-container.dark .theme-toggle-button:hover{
+    background-color: var(--button-hover-dark);
+}
